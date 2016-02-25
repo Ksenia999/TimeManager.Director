@@ -1,0 +1,39 @@
+<div ng-controller="mainCtrl" layout="column" style="height:100%" ng-cloak>
+    <section layout="row" flex>
+        <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
+            <md-toolbar class="md-theme-green" layout="row">
+                <h1 class="md-toolbar-tools">TimeManager</h1>
+            </md-toolbar>
+            <md-content layout-padding ng-controller="SideNavCtrl" >
+                <p>
+                    Проекты
+                </p>
+                <p>
+                    Задачи
+                </p>
+                <p>
+                    Исполнители
+                </p>
+            </md-content>
+        </md-sidenav>
+        <md-content flex ng-controller="SideNavCtrl">
+            <div layout="column" layout-fill layout-align="top left">
+                <md-toolbar class="md-theme-green" layout="row">
+                    <md-button class="iconButton36" ng-click="openSideNav()" hide-gt-md>
+                        <md-icon md-svg-icon="icons/ic_menu_black_36px.svg"></md-icon>
+                    </md-button>
+                    <h1 class="md-toolbar-tools">Панель задач</h1>
+                </md-toolbar>
+                <div layout-padding layout-align="top left">
+                <p>
+                    Задача 1
+                </p>
+                <p>
+                    Задача 2
+                </p>
+                </div>
+            </div>
+            <div flex></div>
+        </md-content>
+    </section>
+</div>
