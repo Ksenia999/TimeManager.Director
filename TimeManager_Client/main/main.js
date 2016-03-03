@@ -24,6 +24,42 @@ angular
             .accentPalette('orange')
     })
     .controller('mainCtrl', function ($scope, $mdSidenav, $log) {
+        $scope.tasks = [{
+            name: 'Альфа версия TM.Director',
+            project: 'TimeManager',
+            status: 'В работе',
+            executors: '2',
+            deadline: "18.03.2016",
+            estimated_time: "20/30 ч."
+        }, {
+            name: 'Бета версия TM.Director',
+            project: 'TimeManager',
+            status: 'В работе',
+            executors: '2',
+            deadline: "18.03.2016",
+            estimated_time: "20/30 ч."
+        }, {
+            name: 'Релизная версия TM.Director',
+            project: 'TimeManager',
+            status: 'В работе',
+            executors: '2',
+            deadline: "18.03.2016",
+            estimated_time: "20/30 ч."
+        }, {
+            name: 'Альфа версия TM.Director',
+            project: 'TimeManager',
+            status: 'В работе',
+            executors: '2',
+            deadline: "18.03.2016",
+            estimated_time: "20/30 ч."
+        }, {
+            name: 'Альфа версия TM.Director',
+            project: 'TimeManager',
+            status: 'В работе',
+            executors: '2',
+            deadline: "18.03.2016",
+            estimated_time: "20/30 ч."
+        }];
     })
     .controller('SideNavCtrl', function ($scope, $mdSidenav) {
         $scope.close = function () {
@@ -33,3 +69,4 @@ angular
             $mdSidenav('left').toggle()
         };
     });
+

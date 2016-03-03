@@ -1,6 +1,47 @@
 <div ng-controller="mainCtrl" layout="column" style="height:100%" ng-cloak>
     <section layout="row" flex>
-        <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
+        <md-content flex ng-controller="mainCtrl">
+            <md-toolbar layout="row">
+                <h1 class="md-toolbar-tools">TimeManager.Director</h1>
+            </md-toolbar>
+            <md-tabs md-dynamic-height md-border-bottom>
+                <md-tab label="Проекты">
+                    <md-content class="md-padding">
+                        <p>Проект 1</p>
+                        <p>Проект 2</p>
+                        <p>Проект 3</p>
+                    </md-content>
+                </md-tab>
+                <md-tab label="Задачи">
+                    <div ng-controller="mainCtrl" ng-cloak>
+                        <md-content>
+                            <md-list>
+                                <md-list-item class="md-2-line" ng-repeat="item in tasks">
+                                    <div class="md-list-item-text">
+                                        <h3>{{item.name}}</h3>
+                                        <h4>{{item.project}}</h4>
+                                    </div>
+                                    <div class="md-list-item-text">
+                                        <p>{{item.status}}</p>
+                                        <h6>{{item.executors}}</h6>
+                                    </div>
+                                    <md-button class="md-secondary">Действие</md-button>
+                                    <md-divider ng-if="!$last"></md-divider>
+                                </md-list-item>
+                            </md-list>
+                        </md-content>
+                    </div>
+                </md-tab>
+                <md-tab label="Исполнители">
+                    <md-content class="md-padding">
+                        <p>Исполнитель 1</p>
+                        <p>Исполнитель 2</p>
+                        <p>Исполнитель 3</p>
+                    </md-content>
+                </md-tab>
+            </md-tabs>
+        </md-content>
+        <!--<md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
             <md-toolbar class="md-theme-green" layout="row">
                 <h1 class="md-toolbar-tools">TimeManager</h1>
             </md-toolbar>
@@ -15,8 +56,8 @@
                     Исполнители
                 </p>
             </md-content>
-        </md-sidenav>
-        <md-content flex ng-controller="SideNavCtrl">
+        </md-sidenav>-->
+        <!--<md-content flex ng-controller="SideNavCtrl">
             <div layout="column" layout-fill layout-align="top left">
                 <md-toolbar class="md-theme-green" layout="row">
                     <md-button class="iconButton36" ng-click="openSideNav()" hide-gt-md>
@@ -24,16 +65,25 @@
                     </md-button>
                     <h1 class="md-toolbar-tools">Панель задач</h1>
                 </md-toolbar>
-                <div layout-padding layout-align="top left">
-                <p>
-                    Задача 1
-                </p>
-                <p>
-                    Задача 2
-                </p>
+                <div ng-controller="mainCtrl" ng-cloak>
+                    <md-content>
+                        <md-list>
+                            <md-list-item class="md-2-line" ng-repeat="item in tasks">
+                                <div class="md-list-item-text">
+                                    <h3>{{item.name}}</h3>
+                                    <h4>{{item.project}}</h4>
+                                </div>
+                                <div class="md-list-item-text">
+                                <p>{{item.status}}</p>
+                                <h6>{{item.executors}}</h6>
+                                </div>
+                                <md-button class="md-secondary">Respond</md-button>
+                                <md-divider ng-if="!$last"></md-divider>
+                            </md-list-item>
+                        </md-list>
+                    </md-content>
                 </div>
             </div>
-            <div flex></div>
-        </md-content>
+        </md-content>-->
     </section>
 </div>
